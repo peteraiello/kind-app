@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/peteraiello/kind-app/static/css/main.15fa3b75.chunk.css",
+    "main.js": "/peteraiello/kind-app/static/js/main.432d8bba.chunk.js",
+    "main.js.map": "/peteraiello/kind-app/static/js/main.432d8bba.chunk.js.map",
+    "runtime-main.js": "/peteraiello/kind-app/static/js/runtime-main.8760b2ca.js",
+    "runtime-main.js.map": "/peteraiello/kind-app/static/js/runtime-main.8760b2ca.js.map",
+    "static/js/2.4bb01b09.chunk.js": "/peteraiello/kind-app/static/js/2.4bb01b09.chunk.js",
+    "static/js/2.4bb01b09.chunk.js.map": "/peteraiello/kind-app/static/js/2.4bb01b09.chunk.js.map",
+    "static/js/3.ac52b71a.chunk.js": "/peteraiello/kind-app/static/js/3.ac52b71a.chunk.js",
+    "static/js/3.ac52b71a.chunk.js.map": "/peteraiello/kind-app/static/js/3.ac52b71a.chunk.js.map",
+    "index.html": "/peteraiello/kind-app/index.html",
+    "static/css/main.15fa3b75.chunk.css.map": "/peteraiello/kind-app/static/css/main.15fa3b75.chunk.css.map",
+    "static/js/2.4bb01b09.chunk.js.LICENSE.txt": "/peteraiello/kind-app/static/js/2.4bb01b09.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/peteraiello/kind-app/static/media/kindness-bg.7745ae18.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8760b2ca.js",
+    "static/js/2.4bb01b09.chunk.js",
+    "static/css/main.15fa3b75.chunk.css",
+    "static/js/main.432d8bba.chunk.js"
+  ]
+}
