@@ -1,0 +1,47 @@
+.App {
+  text-align: center;
+  background-image: url('/src/assets/images/kindness-bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+}
+.body-app{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.container {
+  width: 100%;
+  max-width: 800px;
+  background-color: #ffffff90;
+  padding: 1rem 2rem 2rem 2rem;
+  border-radius: 1rem;
+}
+button {
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  background: #00000080;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1rem;
+}
+ul.suggestions {
+  list-style: none;
+  padding: 0;
+}
+ul.suggestions li {
+  display: none;
+}
+ul.suggestions li.active {
+  display: block;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}

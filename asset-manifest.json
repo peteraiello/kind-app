@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/kindness-app/static/css/main.9c9aa8c3.chunk.css",
+    "main.js": "/kindness-app/static/js/main.940d9d9e.chunk.js",
+    "main.js.map": "/kindness-app/static/js/main.940d9d9e.chunk.js.map",
+    "runtime-main.js": "/kindness-app/static/js/runtime-main.542aec84.js",
+    "runtime-main.js.map": "/kindness-app/static/js/runtime-main.542aec84.js.map",
+    "static/js/2.4bb01b09.chunk.js": "/kindness-app/static/js/2.4bb01b09.chunk.js",
+    "static/js/2.4bb01b09.chunk.js.map": "/kindness-app/static/js/2.4bb01b09.chunk.js.map",
+    "static/js/3.ac52b71a.chunk.js": "/kindness-app/static/js/3.ac52b71a.chunk.js",
+    "static/js/3.ac52b71a.chunk.js.map": "/kindness-app/static/js/3.ac52b71a.chunk.js.map",
+    "index.html": "/kindness-app/index.html",
+    "static/css/main.9c9aa8c3.chunk.css.map": "/kindness-app/static/css/main.9c9aa8c3.chunk.css.map",
+    "static/js/2.4bb01b09.chunk.js.LICENSE.txt": "/kindness-app/static/js/2.4bb01b09.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/kindness-app/static/media/kindness-bg.7745ae18.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.542aec84.js",
+    "static/js/2.4bb01b09.chunk.js",
+    "static/css/main.9c9aa8c3.chunk.css",
+    "static/js/main.940d9d9e.chunk.js"
+  ]
+}
