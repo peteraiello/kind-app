@@ -5,22 +5,24 @@ import data from './data.json';
 
 function App() {
 
-  let myRandom = 0;
+  let myInt = 0; 
 
   // convert the suggestion data to an array 
   let dataArr = Object.keys(data);
 
-  // get the total number of suggestions
   let total = dataArr.length;
 
-  const [randNum, setNum] = useState(0);
+  const [randNum, setNum] = useState(myInt);
 
   const numberPick = (e) => {
+    
     e.preventDefault();
-    /* might put this in a function later */
-    myRandom = Math.random() * (total - 1) + 1;
-    myRandom = Math.floor(myRandom);
-    setNum(myRandom);
+
+    if(randNum < total -1) {
+      setNum( randNum + 1);
+    } else {
+      setNum(0);
+    }
   }
 
   return (
