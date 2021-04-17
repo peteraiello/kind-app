@@ -1,27 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './App.css';
-import data from './data.json';
-
+import firebase from './firebase';
 
 function App() {
-
+  // state for firebase array data
+  const [arrData, setData] = useState({
+    Suggestions: [],
+  });
+  // retrieve database entries from firebase
+  const getUserData = () => {
+    let ref = firebase.database().ref('/');
+    ref.on('value', snapshot => {
+      const snapData = snapshot.val();
+      setData(snapData);
+    });
+  }
+  useEffect(() => {
+   getUserData();
+  },[]);
   let myInt = 0; 
-
-  // convert the suggestion data to an array 
-  let dataArr = Object.keys(data);
-
-  let total = dataArr.length;
-
-  const [randNum, setNum] = useState(myInt);
+  let total = arrData.Suggestions.length;
+  const [active, setActive] = useState(myInt);
 
   const numberPick = (e) => {
-    
     e.preventDefault();
-
-    if(randNum < total -1) {
-      setNum( randNum + 1);
+    if(active < total -1) {
+      setActive( active + 1);
     } else {
-      setNum(0);
+      setActive(0);
     }
   }
 
@@ -30,9 +36,9 @@ function App() {
       <div className="body-app">
         <div className="container">
           <ul className="suggestions">
-            {data.map((options, index) => (
-              <li key={options.title} className={ randNum === index ? 'active' : 'inactive' }><h1>{options.suggestion}</h1></li>
-            ))}
+          { arrData.Suggestions.map((suggestion, index) => (
+            <li key={index} className={ active === index ? 'active' : 'inactive' }><h1>{suggestion.suggestion}</h1></li>
+          )) }
           </ul>
           <button 
             onClick={(e) => numberPick(e)}
