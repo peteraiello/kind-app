@@ -4,16 +4,31 @@ import firebase from '../firebase';
 
 const Slider = () => {
 
-    // state for firebase array data
+    const [items, newItem] = useState([]);
+
     const [arrData, setData] = useState({
-        Suggestions: [],
+        suggestions: [],
     });
+
     // retrieve database entries from firebase
     const getUserData = () => {
-        let ref = firebase.database().ref('/');
+        let ref = firebase.database().ref('suggestions');
         ref.on('value', snapshot => {
-            const snapData = snapshot.val();
-            setData(snapData);
+            let items = snapshot.val();
+            console.log(items);
+            let myArr = [];
+            for (let item in items) {
+                myArr.push({
+                    id: item,
+                    suggestion: items[item].suggestion,
+                    username: items[item].username
+                });
+            }
+
+            setData({
+                suggestions: myArr
+            });
+
         });
     }
 
@@ -22,7 +37,12 @@ const Slider = () => {
     },[]);
 
     let myInt = 0; 
-    let total = arrData.Suggestions.length;
+    let total = 0;
+
+    if(arrData.suggestions){
+        total = arrData.suggestions.length;
+    }
+
     const [active, setActive] = useState(myInt);
 
     const numberPick = (e) => {
@@ -37,8 +57,8 @@ const Slider = () => {
     return(
         <div className="container">
             <ul className="suggestions">
-            { arrData.Suggestions.map((suggestion, index) => (
-                <li key={index} className={ active === index ? 'active' : 'inactive' }><h1>{suggestion.suggestion}</h1></li>
+            { total > 0 && arrData.suggestions.map((suggestion, index) => (
+                <li key={suggestion.id} className={ active === index ? 'active' : 'inactive' }><h1>{suggestion.suggestion}</h1></li>
             )) }
             </ul>
             <button 
