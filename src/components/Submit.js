@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import firebase from '../firebase';
 
-
 const Login = () => {
 
    const [currentSuggestion, setSuggestion] = useState('');

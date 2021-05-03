@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import firebase from '../firebase';
 
-
 const Slider = () => {
-
-    const [items, newItem] = useState([]);
 
     const [arrData, setData] = useState({
         suggestions: [],
@@ -58,7 +55,10 @@ const Slider = () => {
         <div className="container">
             <ul className="suggestions">
             { total > 0 && arrData.suggestions.map((suggestion, index) => (
-                <li key={suggestion.id} className={ active === index ? 'active' : 'inactive' }><h1>{suggestion.suggestion}</h1></li>
+                <li key={suggestion.id} className={ active === index ? 'active' : 'inactive' }>
+                    <h1>{suggestion.suggestion}</h1>
+                    <p>Kindee: {suggestion.username}</p>
+                </li>
             )) }
             </ul>
             <button 
