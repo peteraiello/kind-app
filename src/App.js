@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
         <Router>
-          <div class="header">
+          <div className="header">
             <Menu />
           </div>
           <div className="body-app">

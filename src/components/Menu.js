@@ -1,6 +1,4 @@
 import React, {useState} from 'react';
-import Submit from './Submit';
-import Slider from './Slider';
 import menuIcon from '../assets/images/bars-solid.svg';
 
 import {
@@ -19,7 +17,7 @@ const Menu = () => {
     return (
         <>
         <img src={menuIcon} alt="menu-icon" className="menu-icon" onClick={(e) => openMenu(e) }/>
-            { menuOpen == true &&
+            { menuOpen === true &&
                 <div className={menuOpen ? 'nav-wrapper' : 'menu-close'}> 
 
                         <nav>
